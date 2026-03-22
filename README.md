@@ -64,13 +64,6 @@ I am a **Backend-focused Software Engineer** with a deep passion for building ro
 
 ### 📊 **this week i spent my time on:**
 <!--START_SECTION:waka-->
-```txt
-TypeScript   2 hrs 36 mins         █████████████▓░░░░░░░░░░░   54.46 %
-Bash         40 mins               ███▒░░░░░░░░░░░░░░░░░░░░░   13.98 %
-Markdown     30 mins               ██▓░░░░░░░░░░░░░░░░░░░░░░   10.41 %
-Go           28 mins               ██▒░░░░░░░░░░░░░░░░░░░░░░   09.87 %
-Python       13 mins               █▒░░░░░░░░░░░░░░░░░░░░░░░   04.67 %
-```
 <!--END_SECTION:waka-->
 
 ---
