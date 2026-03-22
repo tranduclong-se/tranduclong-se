@@ -78,11 +78,7 @@ I am a **Backend-focused Software Engineer** with a deep passion for building ro
 </p>
 
 ### 🐍 **Snake Eating My Contributions**
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tranduclong-se/tranduclong-se/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/tranduclong-se/tranduclong-se/output/github-contribution-grid-snake.svg">
-  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/tranduclong-se/tranduclong-se/output/github-contribution-grid-snake.svg">
-</picture>
+![Snake animation](https://github.com/tranduclong-se/tranduclong-se/blob/output/github-contribution-grid-snake.svg)
 
 <br>
 <h4 align="center">Thanks for visiting! Feel free to star some repositories if you find them interesting! </h4>
