@@ -28,7 +28,7 @@ I am a **Backend-focused Software Engineer** with a deep passion for building ro
 
 #### 📜 **Languages**
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=ts,js,java,py,cpp,cs,ruby,kotlin" height="50" />
+  <img src="https://skillicons.dev/icons?i=ts,js,java,py,cpp,ruby,kotlin,html,css" height="50" />
 </p>
 
 #### 🚀 **Frameworks & Libraries**
@@ -49,8 +49,6 @@ I am a **Backend-focused Software Engineer** with a deep passion for building ro
 #### 🛠️ **Development Tools & Integrations**
 <p align="left">
   <img src="https://skillicons.dev/icons?i=github,gitlab,postman" height="50" />
-  <img src="https://img.shields.io/badge/Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white" height="40" />
-  <img src="https://img.shields.io/badge/Socket.io-black?style=for-the-badge&logo=socket.io&badgeColor=010101" height="40" />
 </p>
 
 #### 🤖 **AI & Data Processing**
@@ -59,6 +57,7 @@ I am a **Backend-focused Software Engineer** with a deep passion for building ro
   <img src="https://img.shields.io/badge/ChatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white" height="40" />
   <img src="https://img.shields.io/badge/Copilot-121011?style=for-the-badge&logo=github&logoColor=white" height="40" />
   <img src="https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white" height="40" />
+  <img src="https://img.shields.io/badge/Antigravity-4285F4?style=for-the-badge&logo=google&logoColor=white" height="40" />
 </p>
 
 ---
