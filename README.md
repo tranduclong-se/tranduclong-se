@@ -64,6 +64,11 @@ I am a **Backend-focused Software Engineer** with a deep passion for building ro
 
 ### 📊 **this week i spent my time on:**
 <!--START_SECTION:waka-->
+
+```txt
+No activity tracked
+```
+
 <!--END_SECTION:waka-->
 
 ---
