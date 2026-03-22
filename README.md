@@ -14,6 +14,12 @@
   <a href="https://t.me/Ryuu_Tran">
     <img src="https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white" />
   </a>
+  <a href="https://www.instagram.com/itlong30102003">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=white" />
+  </a>
+  <a href="https://www.threads.net/@itlong30102003">
+    <img src="https://img.shields.io/badge/Threads-000000?logo=threads&logoColor=white" />
+  </a>
   <a href="https://github.com/tranduclong-se">
     <img src="https://komarev.com/ghpvc/?username=tranduclong-se&label=Profile%20Views&color=0e75b6&style=flat" />
   </a>
