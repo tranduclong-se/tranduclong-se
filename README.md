@@ -8,6 +8,12 @@
   <a href="https://www.linkedin.com/in/tranduclongse-tdmu">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white" />
   </a>
+  <a href="https://www.facebook.com/longtran.530215">
+    <img src="https://img.shields.io/badge/Facebook-1877F2?logo=facebook&logoColor=white" />
+  </a>
+  <a href="https://t.me/Ryuu_Tran">
+    <img src="https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white" />
+  </a>
   <a href="https://github.com/tranduclong-se">
     <img src="https://komarev.com/ghpvc/?username=tranduclong-se&label=Profile%20Views&color=0e75b6&style=flat" />
   </a>
