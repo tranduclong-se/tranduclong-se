@@ -1,13 +1,21 @@
-# Hi there, I'm Long (tranduclong-se) 👋
-### Backend-focused Software Engineer | Node.js Enthusiast
+<h1 align="center">Hi 👋, I'm Long (tranduclong-se)</h1>
+<h3 align="center">🚀 Backend-focused Software Engineer | Node.js Enthusiast 🚀</h3>
 
-<p align="left">
- <img src="https://komarev.com/ghpvc/?username=tranduclong-se&label=Profile%20views&color=0e75b6&style=flat" alt="tranduclong-se" />
+<p align="center">
+  <a href="mailto:tranduclong.se@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-D14836?logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://www.linkedin.com/in/tranduclongse-tdmu">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://github.com/tranduclong-se">
+    <img src="https://komarev.com/ghpvc/?username=tranduclong-se&label=Profile%20Views&color=0e75b6&style=flat" />
+  </a>
 </p>
 
 ---
 
-## 🚀 About Me
+### 👨‍💻 **About Me**
 I am a **Backend-focused Software Engineer** with a deep passion for building robust, high-performance server-side applications within the **JavaScript/TypeScript ecosystem**. My expertise lies in designing **RESTful APIs** and **modular architectures** that prioritize clean, maintainable code and system reliability. I take pride in writing **production-ready logic** and have a strong mindset for backend optimization, complemented by a solid understanding of modern deployment workflows, including **Linux environments** and **Docker containerization**.
 
 - 🔭 I’m currently working on **Scalable Backend Services**
@@ -16,30 +24,46 @@ I am a **Backend-focused Software Engineer** with a deep passion for building ro
 
 ---
 
-## 🛠️ Tech Stack
+### 🛠 **Tech Stack**
+#### 📜 **Languages**
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=ts,js" height="50" />
+</p>
 
-### 🌐 Backend & Core
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
-![TypeScript](https://img.shields.io/badge/typescript-%23007acc.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+#### 🌐 **Backend & Core**
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=nodejs,express" height="50" />
+</p>
 
-### 🗄️ Databases & DevOps
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+#### 🗄️ **Databases**
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=postgres,mongodb" height="50" />
+</p>
 
----
-
-## 📊 GitHub Stats
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=tranduclong-se&show_icons=true&theme=tokyonight" alt="Long's Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=tranduclong-se&layout=compact&theme=tokyonight" alt="Top Langs" />
+#### ☁️ **DevOps & Tools**
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=docker,linux" height="50" />
 </p>
 
 ---
 
-## 📫 Connect with me
-[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/your-linkedin-id)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your-email@gmail.com)
+### 📊 **GitHub Stats**
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=tranduclong-se&theme=radical" width="100%" />
+</p>
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=tranduclong-se&theme=radical" width="48%" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=tranduclong-se&theme=radical" width="48%" />
+</p>
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=tranduclong-se&theme=radical" width="48%" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=tranduclong-se&theme=radical&utcOffset=7" width="48%" />
+</p>
+
+### 🐍 **Snake Eating My Contributions**
+![Snake animation](https://github.com/tranduclong-se/tranduclong-se/blob/output/github-contribution-grid-snake.svg)
+
+<br>
+<h4 align="center">Thanks for visiting! Feel free to star some repositories if you find them interesting! </h4>
