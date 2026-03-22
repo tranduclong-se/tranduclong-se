@@ -62,6 +62,19 @@ I am a **Backend-focused Software Engineer** with a deep passion for building ro
 
 ---
 
+### 📊 **this week i spent my time on:**
+<!--START_SECTION:waka-->
+```txt
+TypeScript   2 hrs 36 mins         █████████████▓░░░░░░░░░░░   54.46 %
+Bash         40 mins               ███▒░░░░░░░░░░░░░░░░░░░░░   13.98 %
+Markdown     30 mins               ██▓░░░░░░░░░░░░░░░░░░░░░░   10.41 %
+Go           28 mins               ██▒░░░░░░░░░░░░░░░░░░░░░░   09.87 %
+Python       13 mins               █▒░░░░░░░░░░░░░░░░░░░░░░░   04.67 %
+```
+<!--END_SECTION:waka-->
+
+---
+
 ### 📊 **GitHub Stats**
 <p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=tranduclong-se&theme=radical" width="100%" />
@@ -79,6 +92,10 @@ I am a **Backend-focused Software Engineer** with a deep passion for building ro
 
 ### 🐍 **Snake Eating My Contributions**
 ![Snake animation](https://github.com/tranduclong-se/tranduclong-se/blob/output/github-contribution-grid-snake.svg)
+
+### 🚧 **my todoist stats:**
+<!-- todoist_readme:start -->
+<!-- todoist_readme:end -->
 
 <br>
 <h4 align="center">Thanks for visiting! Feel free to star some repositories if you find them interesting! </h4>
