@@ -92,8 +92,12 @@ No activity tracked
 ![Snake animation](https://github.com/tranduclong-se/tranduclong-se/blob/output/github-contribution-grid-snake.svg)
 
 ### 🚧 **my todoist stats:**
-<!-- todoist_readme:start -->
-<!-- todoist_readme:end -->
+
+### 🇯🇵 Language Skills
+- **Vietnamese**: Native
+- **English**: Reading Documentation
+- **Japanese (JLPT N5)**: 
+  `█████░░░░░░░░░░░░░░░` 25% (Targeting N3 in 2026)
 
 <br>
 <h4 align="center">Thanks for visiting! Feel free to star some repositories if you find them interesting! </h4>
