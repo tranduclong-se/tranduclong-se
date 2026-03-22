@@ -91,11 +91,7 @@ No activity tracked
 ### 🐍 **Snake Eating My Contributions**
 ![Snake animation](https://github.com/tranduclong-se/tranduclong-se/blob/output/github-contribution-grid-snake.svg)
 
-### 🚧 **my todoist stats:**
-<!-- todoist_readme:start -->
-<!-- todoist_readme:end -->
 
----
 
 ### Language Skills
 - **Vietnamese**: Native
