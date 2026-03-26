@@ -89,6 +89,15 @@ JSON              10 mins               █▒░░░░░░░░░░░�
 
 ---
 
+### 🧩 **LeetCode Stats**
+<!--START_SECTION:leetcode-->
+<p align="center">
+  <img src="leetcode-card.svg" alt="LeetCode Stats" />
+</p>
+<!--END_SECTION:leetcode-->
+
+---
+
 ### 📊 **GitHub Stats**
 <p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=tranduclong-se&theme=radical" width="100%" />

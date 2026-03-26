@@ -1,0 +1,205 @@
+name: LeetCode Stats
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Runs every 12 hours
+    - cron: "0 */12 * * *"
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  update-leetcode-stats:
+    name: Update LeetCode Stats Card
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch LeetCode stats and generate SVG card
+        run: |
+          # Fetch data from LeetCode Stats API
+          RESPONSE=$(curl -s "https://leetcode-stats-api.herokuapp.com/tranduclong-se")
+
+          # Check if API returned success
+          STATUS=$(echo "$RESPONSE" | jq -r '.status')
+          if [ "$STATUS" != "success" ]; then
+            echo "API request failed, skipping update."
+            exit 0
+          fi
+
+          # Parse JSON response
+          TOTAL_SOLVED=$(echo "$RESPONSE" | jq -r '.totalSolved')
+          TOTAL_QUESTIONS=$(echo "$RESPONSE" | jq -r '.totalQuestions')
+          EASY_SOLVED=$(echo "$RESPONSE" | jq -r '.easySolved')
+          TOTAL_EASY=$(echo "$RESPONSE" | jq -r '.totalEasy')
+          MEDIUM_SOLVED=$(echo "$RESPONSE" | jq -r '.mediumSolved')
+          TOTAL_MEDIUM=$(echo "$RESPONSE" | jq -r '.totalMedium')
+          HARD_SOLVED=$(echo "$RESPONSE" | jq -r '.hardSolved')
+          TOTAL_HARD=$(echo "$RESPONSE" | jq -r '.totalHard')
+          ACCEPTANCE_RATE=$(echo "$RESPONSE" | jq -r '.acceptanceRate')
+
+          echo "Data: Easy=$EASY_SOLVED/$TOTAL_EASY, Medium=$MEDIUM_SOLVED/$TOTAL_MEDIUM, Hard=$HARD_SOLVED/$TOTAL_HARD, Total=$TOTAL_SOLVED"
+
+          # Calculate donut chart arcs
+          # Circle circumference = 2 * PI * 45 ≈ 282.74
+          CIRCUMFERENCE="282.74"
+
+          if [ "$TOTAL_QUESTIONS" -gt 0 ]; then
+            EASY_ARC=$(awk "BEGIN {printf \"%.2f\", ($EASY_SOLVED/$TOTAL_QUESTIONS)*$CIRCUMFERENCE}")
+            MED_ARC=$(awk "BEGIN {printf \"%.2f\", ($MEDIUM_SOLVED/$TOTAL_QUESTIONS)*$CIRCUMFERENCE}")
+            HARD_ARC=$(awk "BEGIN {printf \"%.2f\", ($HARD_SOLVED/$TOTAL_QUESTIONS)*$CIRCUMFERENCE}")
+            SOLVED_ARC=$(awk "BEGIN {printf \"%.2f\", ($TOTAL_SOLVED/$TOTAL_QUESTIONS)*$CIRCUMFERENCE}")
+          else
+            EASY_ARC="0"
+            MED_ARC="0"
+            HARD_ARC="0"
+            SOLVED_ARC="0"
+          fi
+
+          # Calculate offsets for stacked donut (easy, then medium, then hard)
+          EASY_OFFSET="0"
+          MED_OFFSET=$(awk "BEGIN {printf \"%.2f\", $CIRCUMFERENCE - $EASY_ARC}")
+          HARD_OFFSET=$(awk "BEGIN {printf \"%.2f\", $CIRCUMFERENCE - $EASY_ARC - $MED_ARC}")
+
+          # Calculate progress bar widths (max 160px)
+          BAR_MAX=160
+          if [ "$TOTAL_EASY" -gt 0 ]; then
+            EASY_BAR_W=$(awk "BEGIN {v=int(($EASY_SOLVED/$TOTAL_EASY)*$BAR_MAX); if(v<2 && $EASY_SOLVED>0) v=2; printf \"%d\", v}")
+          else
+            EASY_BAR_W=0
+          fi
+          if [ "$TOTAL_MEDIUM" -gt 0 ]; then
+            MED_BAR_W=$(awk "BEGIN {v=int(($MEDIUM_SOLVED/$TOTAL_MEDIUM)*$BAR_MAX); if(v<2 && $MEDIUM_SOLVED>0) v=2; printf \"%d\", v}")
+          else
+            MED_BAR_W=0
+          fi
+          if [ "$TOTAL_HARD" -gt 0 ]; then
+            HARD_BAR_W=$(awk "BEGIN {v=int(($HARD_SOLVED/$TOTAL_HARD)*$BAR_MAX); if(v<2 && $HARD_SOLVED>0) v=2; printf \"%d\", v}")
+          else
+            HARD_BAR_W=0
+          fi
+
+          # Remaining (unsolved) arc for the donut ring background
+          UNSOLVED_ARC=$(awk "BEGIN {printf \"%.2f\", $CIRCUMFERENCE - $SOLVED_ARC}")
+
+          # Generate SVG
+          cat > leetcode-card.svg << 'SVGEOF'
+          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="200" viewBox="0 0 500 200">
+            <defs>
+              <style>
+                .card-bg { fill: #1a1a2e; }
+                .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; font-weight: 600; fill: #e0e0e0; }
+                .total-num { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 28px; font-weight: 700; fill: #ffffff; }
+                .total-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 11px; fill: #8a8a8a; }
+                .label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 12px; fill: #b0b0b0; }
+                .count-bold { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; font-weight: 700; fill: #ffffff; }
+                .count-total { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 12px; fill: #8a8a8a; }
+                .bar-bg { fill: #3a3a3a; }
+                .ring-bg { fill: none; stroke: #3a3a3a; stroke-width: 8; }
+                .ring-easy { fill: none; stroke: #00b8a3; stroke-width: 8; stroke-linecap: round; }
+                .ring-medium { fill: none; stroke: #ffc01e; stroke-width: 8; stroke-linecap: round; }
+                .ring-hard { fill: none; stroke: #ef4743; stroke-width: 8; stroke-linecap: round; }
+              </style>
+            </defs>
+
+            <!-- Card background -->
+            <rect class="card-bg" width="500" height="200" rx="12"/>
+
+            <!-- Title -->
+            <text class="title" x="24" y="30">Solved Problems</text>
+
+            <!-- Donut Chart - background ring -->
+            <circle class="ring-bg" cx="90" cy="115" r="45"/>
+
+            <!-- Donut Chart - Easy arc -->
+            <circle class="ring-easy" cx="90" cy="115" r="45"
+              stroke-dasharray="EASY_ARC_VAL CIRCUMFERENCE_VAL"
+              stroke-dashoffset="0"
+              transform="rotate(-90 90 115)"/>
+
+            <!-- Donut Chart - Medium arc -->
+            <circle class="ring-medium" cx="90" cy="115" r="45"
+              stroke-dasharray="MED_ARC_VAL CIRCUMFERENCE_VAL"
+              stroke-dashoffset="MED_OFFSET_VAL"
+              transform="rotate(-90 90 115)"/>
+
+            <!-- Donut Chart - Hard arc -->
+            <circle class="ring-hard" cx="90" cy="115" r="45"
+              stroke-dasharray="HARD_ARC_VAL CIRCUMFERENCE_VAL"
+              stroke-dashoffset="HARD_OFFSET_VAL"
+              transform="rotate(-90 90 115)"/>
+
+            <!-- Center text -->
+            <text class="total-num" x="90" y="120" text-anchor="middle">TOTAL_SOLVED_VAL</text>
+            <text class="total-label" x="90" y="137" text-anchor="middle">Solved</text>
+
+            <!-- Easy row -->
+            <text class="label" x="175" y="70">Easy</text>
+            <text class="count-bold" x="240" y="70">EASY_SOLVED_VAL</text>
+            <text class="count-total" x="EASY_TOTAL_X_VAL" y="70">/TOTAL_EASY_VAL</text>
+            <rect class="bar-bg" x="310" y="59" width="160" height="8" rx="4"/>
+            <rect fill="#00b8a3" x="310" y="59" width="EASY_BAR_W_VAL" height="8" rx="4"/>
+
+            <!-- Medium row -->
+            <text class="label" x="175" y="115">Medium</text>
+            <text class="count-bold" x="240" y="115">MED_SOLVED_VAL</text>
+            <text class="count-total" x="MED_TOTAL_X_VAL" y="115">/TOTAL_MED_VAL</text>
+            <rect class="bar-bg" x="310" y="104" width="160" height="8" rx="4"/>
+            <rect fill="#ffc01e" x="310" y="104" width="MED_BAR_W_VAL" height="8" rx="4"/>
+
+            <!-- Hard row -->
+            <text class="label" x="175" y="160">Hard</text>
+            <text class="count-bold" x="240" y="160">HARD_SOLVED_VAL</text>
+            <text class="count-total" x="HARD_TOTAL_X_VAL" y="160">/TOTAL_HARD_VAL</text>
+            <rect class="bar-bg" x="310" y="149" width="160" height="8" rx="4"/>
+            <rect fill="#ef4743" x="310" y="149" width="HARD_BAR_W_VAL" height="8" rx="4"/>
+          </svg>
+          SVGEOF
+
+          # Remove heredoc indentation
+          sed -i 's/^          //' leetcode-card.svg
+
+          # Calculate X positions for total text (right after bold number)
+          # Approximate: each digit ~10px wide for bold, starting at x=240
+          EASY_DIGITS=${#EASY_SOLVED}
+          MED_DIGITS=${#MEDIUM_SOLVED}
+          HARD_DIGITS=${#HARD_SOLVED}
+          EASY_TOTAL_X=$(( 240 + EASY_DIGITS * 10 + 2 ))
+          MED_TOTAL_X=$(( 240 + MED_DIGITS * 10 + 2 ))
+          HARD_TOTAL_X=$(( 240 + HARD_DIGITS * 10 + 2 ))
+
+          # Replace placeholders with actual values
+          sed -i "s/EASY_ARC_VAL/$EASY_ARC/g" leetcode-card.svg
+          sed -i "s/MED_ARC_VAL/$MED_ARC/g" leetcode-card.svg
+          sed -i "s/HARD_ARC_VAL/$HARD_ARC/g" leetcode-card.svg
+          sed -i "s/CIRCUMFERENCE_VAL/$CIRCUMFERENCE/g" leetcode-card.svg
+          sed -i "s/MED_OFFSET_VAL/-$MED_OFFSET/g" leetcode-card.svg
+          sed -i "s/HARD_OFFSET_VAL/-$HARD_OFFSET/g" leetcode-card.svg
+          sed -i "s/TOTAL_SOLVED_VAL/$TOTAL_SOLVED/g" leetcode-card.svg
+          sed -i "s/EASY_SOLVED_VAL/$EASY_SOLVED/g" leetcode-card.svg
+          sed -i "s/EASY_TOTAL_X_VAL/$EASY_TOTAL_X/g" leetcode-card.svg
+          sed -i "s/TOTAL_EASY_VAL/$TOTAL_EASY/g" leetcode-card.svg
+          sed -i "s/EASY_BAR_W_VAL/$EASY_BAR_W/g" leetcode-card.svg
+          sed -i "s/MED_SOLVED_VAL/$MEDIUM_SOLVED/g" leetcode-card.svg
+          sed -i "s/MED_TOTAL_X_VAL/$MED_TOTAL_X/g" leetcode-card.svg
+          sed -i "s/TOTAL_MED_VAL/$TOTAL_MEDIUM/g" leetcode-card.svg
+          sed -i "s/MED_BAR_W_VAL/$MED_BAR_W/g" leetcode-card.svg
+          sed -i "s/HARD_SOLVED_VAL/$HARD_SOLVED/g" leetcode-card.svg
+          sed -i "s/HARD_TOTAL_X_VAL/$HARD_TOTAL_X/g" leetcode-card.svg
+          sed -i "s/TOTAL_HARD_VAL/$TOTAL_HARD/g" leetcode-card.svg
+          sed -i "s/HARD_BAR_W_VAL/$HARD_BAR_W/g" leetcode-card.svg
+
+          echo "SVG card generated successfully!"
+          cat leetcode-card.svg
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git diff --quiet || (git add leetcode-card.svg README.md && git commit -m "📊 Update LeetCode stats card" && git push)
