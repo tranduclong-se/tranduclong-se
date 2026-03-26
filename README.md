@@ -107,11 +107,9 @@ JSON              10 mins               █▒░░░░░░░░░░░�
 ---
 
 ### 🧩 **LeetCode Stats**
-<!--START_SECTION:leetcode-->
 <p align="center">
-  <img src="leetcode-card.svg" alt="LeetCode Stats" />
+  <img src="https://leetcard.jacoblin.cool/tranduclong-se?theme=dark&font=Ubuntu" alt="LeetCode Stats" />
 </p>
-<!--END_SECTION:leetcode-->
 
 ### 🐍 **Snake Eating My Contributions**
 ![Snake animation](https://github.com/tranduclong-se/tranduclong-se/blob/output/github-contribution-grid-snake.svg)
