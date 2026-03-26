@@ -89,15 +89,6 @@ JSON              10 mins               █▒░░░░░░░░░░░�
 
 ---
 
-### 🧩 **LeetCode Stats**
-<!--START_SECTION:leetcode-->
-<p align="center">
-  <img src="leetcode-card.svg" alt="LeetCode Stats" />
-</p>
-<!--END_SECTION:leetcode-->
-
----
-
 ### 📊 **GitHub Stats**
 <p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=tranduclong-se&theme=radical" width="100%" />
@@ -112,6 +103,15 @@ JSON              10 mins               █▒░░░░░░░░░░░�
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=tranduclong-se&theme=radical" width="48%" />
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=tranduclong-se&theme=radical&utcOffset=7" width="48%" />
 </p>
+
+---
+
+### 🧩 **LeetCode Stats**
+<!--START_SECTION:leetcode-->
+<p align="center">
+  <img src="leetcode-card.svg" alt="LeetCode Stats" />
+</p>
+<!--END_SECTION:leetcode-->
 
 ### 🐍 **Snake Eating My Contributions**
 ![Snake animation](https://github.com/tranduclong-se/tranduclong-se/blob/output/github-contribution-grid-snake.svg)
