@@ -1,15 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="500" height="200" viewBox="0 0 500 200">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap');
-      .card-bg { fill: #1a1a2e; rx: 12; }
-      .title { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; fill: #e0e0e0; }
-      .total-num { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700; fill: #ffffff; }
-      .total-label { font-family: 'Inter', sans-serif; font-size: 11px; fill: #8a8a8a; }
-      .label { font-family: 'Inter', sans-serif; font-size: 12px; fill: #e0e0e0; }
-      .count-bold { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700; fill: #ffffff; }
-      .count-total { font-family: 'Inter', sans-serif; font-size: 12px; fill: #8a8a8a; }
-      .bar-bg { fill: #3a3a3a; rx: 3; }
+      .card-bg { fill: #1a1a2e; }
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; font-weight: 600; fill: #e0e0e0; }
+      .total-num { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 28px; font-weight: 700; fill: #ffffff; }
+      .total-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 11px; fill: #8a8a8a; }
+      .label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 12px; fill: #b0b0b0; }
+      .count-bold { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; font-weight: 700; fill: #ffffff; }
+      .count-total { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 12px; fill: #8a8a8a; }
+      .bar-bg { fill: #3a3a3a; }
       .ring-bg { fill: none; stroke: #3a3a3a; stroke-width: 8; }
       .ring-easy { fill: none; stroke: #00b8a3; stroke-width: 8; stroke-linecap: round; }
       .ring-medium { fill: none; stroke: #ffc01e; stroke-width: 8; stroke-linecap: round; }
@@ -23,43 +22,49 @@
   <!-- Title -->
   <text class="title" x="24" y="30">Solved Problems</text>
 
-  <!-- Donut Chart -->
+  <!-- Donut Chart - background ring -->
   <circle class="ring-bg" cx="90" cy="115" r="45"/>
-  <!-- Hard arc -->
-  <circle class="ring-hard" cx="90" cy="115" r="45"
-    stroke-dasharray="0 282.74"
-    transform="rotate(-90 90 115)"/>
-  <!-- Medium arc -->
-  <circle class="ring-medium" cx="90" cy="115" r="45"
-    stroke-dasharray="0 282.74"
-    transform="rotate(-90 90 115)"/>
-  <!-- Easy arc -->
+
+  <!-- Donut Chart - Easy arc -->
   <circle class="ring-easy" cx="90" cy="115" r="45"
-    stroke-dasharray="4.90 282.74"
+    stroke-dasharray="0.44 282.74"
+    stroke-dashoffset="0"
+    transform="rotate(-90 90 115)"/>
+
+  <!-- Donut Chart - Medium arc -->
+  <circle class="ring-medium" cx="90" cy="115" r="45"
+    stroke-dasharray="0.29 282.74"
+    stroke-dashoffset="-282.30"
+    transform="rotate(-90 90 115)"/>
+
+  <!-- Donut Chart - Hard arc -->
+  <circle class="ring-hard" cx="90" cy="115" r="45"
+    stroke-dasharray="0.00 282.74"
+    stroke-dashoffset="-282.01"
     transform="rotate(-90 90 115)"/>
 
   <!-- Center text -->
   <text class="total-num" x="90" y="120" text-anchor="middle">10</text>
   <text class="total-label" x="90" y="137" text-anchor="middle">Solved</text>
 
-  <!-- Easy -->
-  <text class="label" x="180" y="68">Easy</text>
-  <text class="count-bold" x="240" y="68">6</text>
-  <text class="count-total" x="256" y="68">/933</text>
-  <rect class="bar-bg" x="310" y="57" width="160" height="8" rx="4"/>
-  <rect fill="#00b8a3" x="310" y="57" width="1" height="8" rx="4"/>
+  <!-- Easy row -->
+  <text class="label" x="175" y="70">Easy</text>
+  <text class="count-bold" x="240" y="70">6</text>
+  <text class="count-total" x="252" y="70">/933</text>
+  <rect class="bar-bg" x="310" y="59" width="160" height="8" rx="4"/>
+  <rect fill="#00b8a3" x="310" y="59" width="2" height="8" rx="4"/>
 
-  <!-- Medium -->
-  <text class="label" x="180" y="113">Medium</text>
-  <text class="count-bold" x="240" y="113">4</text>
-  <text class="count-total" x="256" y="113">/2030</text>
-  <rect class="bar-bg" x="310" y="102" width="160" height="8" rx="4"/>
-  <rect fill="#ffc01e" x="310" y="102" width="1" height="8" rx="4"/>
+  <!-- Medium row -->
+  <text class="label" x="175" y="115">Medium</text>
+  <text class="count-bold" x="240" y="115">4</text>
+  <text class="count-total" x="252" y="115">/2030</text>
+  <rect class="bar-bg" x="310" y="104" width="160" height="8" rx="4"/>
+  <rect fill="#ffc01e" x="310" y="104" width="2" height="8" rx="4"/>
 
-  <!-- Hard -->
-  <text class="label" x="180" y="158">Hard</text>
-  <text class="count-bold" x="240" y="158">0</text>
-  <text class="count-total" x="256" y="158">/916</text>
-  <rect class="bar-bg" x="310" y="147" width="160" height="8" rx="4"/>
-  <rect fill="#ef4743" x="310" y="147" width="0" height="8" rx="4"/>
+  <!-- Hard row -->
+  <text class="label" x="175" y="160">Hard</text>
+  <text class="count-bold" x="240" y="160">0</text>
+  <text class="count-total" x="252" y="160">/916</text>
+  <rect class="bar-bg" x="310" y="149" width="160" height="8" rx="4"/>
+  <rect fill="#ef4743" x="310" y="149" width="0" height="8" rx="4"/>
 </svg>
