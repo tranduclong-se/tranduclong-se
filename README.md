@@ -23,6 +23,13 @@
   <a href="https://github.com/tranduclong-se">
     <img src="https://komarev.com/ghpvc/?username=tranduclong-se&label=Profile%20Views&color=0e75b6&style=flat" />
   </a>
+  <br />
+  <a href="https://drive.google.com/file/d/1DVzZ9ub1hCsVD10zoZVCwUVM8aL6EJVN/view?usp=sharing">
+    <img src="https://img.shields.io/badge/My_Curriculum_Vitae-0078D4?style=for-the-badge&logo=microsoft-word&logoColor=white" />
+  </a>
+  <a href="https://drive.google.com/file/d/12fRpD-f6_5Pa6VcduAyQiruXOqijC01M/view?usp=sharing">
+    <img src="https://img.shields.io/badge/Academic_Transcript-F37021?style=for-the-badge&logo=googlescholar&logoColor=white" />
+  </a>
 </p>
 
 ---
