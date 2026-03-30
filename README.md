@@ -74,7 +74,7 @@ I am a **Backend-focused Software Engineer** with a deep passion for building ro
 <p align="left">
   <img src="https://img.shields.io/badge/Gemini-%238E75B2.svg?style=for-the-badge&logo=googlebard&logoColor=white" height="40" />
   <img src="https://img.shields.io/badge/ChatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white" height="40" />
-  <img src="https://img.shields.io/badge/Copilot-121011?style=for-the-badge&logo=github&logoColor=white" height="40" />
+  <img src="https://img.shields.io/badge/Claude_AI-D97757?style=for-the-badge&logo=anthropic&logoColor=white" height="40" />
   <img src="https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white" height="40" />
   <img src="https://img.shields.io/badge/Antigravity-4285F4?style=for-the-badge&logo=google&logoColor=white" height="40" />
 </p>
@@ -85,11 +85,11 @@ I am a **Backend-focused Software Engineer** with a deep passion for building ro
 <!--START_SECTION:waka-->
 
 ```txt
-Java              1 hr 12 mins          ██████████▒░░░░░░░░░░░░░░   41.22 %
-Markdown          44 mins               ██████▒░░░░░░░░░░░░░░░░░░   25.30 %
-XML               23 mins               ███▒░░░░░░░░░░░░░░░░░░░░░   13.02 %
-JavaScript        16 mins               ██▒░░░░░░░░░░░░░░░░░░░░░░   09.17 %
-JSON              10 mins               █▒░░░░░░░░░░░░░░░░░░░░░░░   05.98 %
+Java              1 hr 9 mins           ██████████████▓░░░░░░░░░░   58.68 %
+XML               23 mins               █████░░░░░░░░░░░░░░░░░░░░   19.40 %
+JSON              10 mins               ██▒░░░░░░░░░░░░░░░░░░░░░░   08.72 %
+Markdown          10 mins               ██░░░░░░░░░░░░░░░░░░░░░░░   08.48 %
+Java Properties   5 mins                █░░░░░░░░░░░░░░░░░░░░░░░░   04.50 %
 ```
 
 <!--END_SECTION:waka-->
