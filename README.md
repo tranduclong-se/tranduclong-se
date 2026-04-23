@@ -85,7 +85,8 @@ I am a **Backend-focused Software Engineer** with a deep passion for building ro
 <!--START_SECTION:waka-->
 
 ```txt
-Nginx configuration file   0 secs                █████████████████████████   100.00 %
+Java                       21 mins               ████████████████████████▓   98.80 %
+Nginx configuration file   0 secs                ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.20 %
 ```
 
 <!--END_SECTION:waka-->
