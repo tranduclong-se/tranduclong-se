@@ -85,11 +85,11 @@ I am a **Backend-focused Software Engineer** with a deep passion for building ro
 <!--START_SECTION:waka-->
 
 ```txt
-Go                         22 mins               ████████▒░░░░░░░░░░░░░░░░   33.02 %
-Java                       21 mins               ███████▓░░░░░░░░░░░░░░░░░   31.32 %
-YAML                       20 mins               ███████▒░░░░░░░░░░░░░░░░░   29.56 %
-Markdown                   3 mins                █▒░░░░░░░░░░░░░░░░░░░░░░░   05.44 %
-Nginx configuration file   0 secs                ░░░░░░░░░░░░░░░░░░░░░░░░░   00.38 %
+Go         1 hr 5 mins           ██████████████▒░░░░░░░░░░   57.82 %
+Java       21 mins               ████▓░░░░░░░░░░░░░░░░░░░░   19.14 %
+YAML       21 mins               ████▓░░░░░░░░░░░░░░░░░░░░   19.04 %
+Markdown   4 mins                █░░░░░░░░░░░░░░░░░░░░░░░░   03.83 %
+Other      0 secs                ░░░░░░░░░░░░░░░░░░░░░░░░░   00.17 %
 ```
 
 <!--END_SECTION:waka-->
