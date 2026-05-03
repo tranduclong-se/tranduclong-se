@@ -85,11 +85,11 @@ I am a **Backend-focused Software Engineer** with a deep passion for building ro
 <!--START_SECTION:waka-->
 
 ```txt
-Protocol Buffer   9 hrs 44 mins         ██████████████▓░░░░░░░░░░   58.12 %
-Go                3 hrs 59 mins         ██████░░░░░░░░░░░░░░░░░░░   23.76 %
-Markdown          2 hrs 12 mins         ███▒░░░░░░░░░░░░░░░░░░░░░   13.16 %
-YAML              28 mins               ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.82 %
-Bash              9 mins                ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.98 %
+Protocol Buffer   9 hrs 54 mins         █████████████░░░░░░░░░░░░   51.81 %
+Go                6 hrs 9 mins          ████████░░░░░░░░░░░░░░░░░   32.21 %
+Markdown          2 hrs 13 mins         ███░░░░░░░░░░░░░░░░░░░░░░   11.63 %
+YAML              27 mins               ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.37 %
+Bash              9 mins                ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.86 %
 ```
 
 <!--END_SECTION:waka-->
