@@ -85,9 +85,7 @@ I am a **Backend-focused Software Engineer** with a deep passion for building ro
 <!--START_SECTION:waka-->
 
 ```txt
-YAML       4 mins                █████████████████████▒░░░   85.77 %
-Other      0 secs                ██▓░░░░░░░░░░░░░░░░░░░░░░   11.30 %
-Markdown   0 secs                ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.94 %
+Other   0 secs                █████████████████████████   100.00 %
 ```
 
 <!--END_SECTION:waka-->
