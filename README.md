@@ -85,8 +85,9 @@ I am a **Backend-focused Software Engineer** with a deep passion for building ro
 <!--START_SECTION:waka-->
 
 ```txt
-C++   3 mins                ████████████████████████▒   97.84 %
-INI   0 secs                ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.16 %
+TypeScript   22 mins               █████████████████████████   100.00 %
+Markdown     0 secs                ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 %
+JSON         0 secs                ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 %
 ```
 
 <!--END_SECTION:waka-->
