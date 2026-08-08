@@ -85,10 +85,8 @@ I am a **Backend-focused Software Engineer** with a deep passion for building ro
 <!--START_SECTION:waka-->
 
 ```txt
-TypeScript   1 hr 8 mins           ██████████████████████▒░░   89.49 %
-Other        4 mins                █▓░░░░░░░░░░░░░░░░░░░░░░░   06.21 %
-YAML         3 mins                █░░░░░░░░░░░░░░░░░░░░░░░░   03.98 %
-JSON         0 secs                ░░░░░░░░░░░░░░░░░░░░░░░░░   00.32 %
+TypeScript   10 mins               █████████████████▒░░░░░░░   69.30 %
+Other        4 mins                ███████▓░░░░░░░░░░░░░░░░░   30.70 %
 ```
 
 <!--END_SECTION:waka-->
